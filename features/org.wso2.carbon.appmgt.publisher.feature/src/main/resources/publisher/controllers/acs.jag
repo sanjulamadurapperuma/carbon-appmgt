@@ -157,7 +157,7 @@ function setAuthenticatedCookieToIDP(samlResponse) {
         options.useSOAP = 1.2;
         options.action = "urn:login";
         var manager = jagg.module("manager");
-        var endPoint = manager.getAuthServerURL() + "/services/SAML2SSOAuthenticationService";
+        var endPoint = manager.getAuthServerURL() + "SAML2SSOAuthenticationService";
         var payload = '<sso:login xmlns:sso="http://sso.saml2.authenticator.identity.carbon.wso2.org"><sso:authDto><xsd:response xmlns:xsd="http://dto.sso.saml2.authenticator.identity.carbon.wso2.org/xsd">'
                       + samlResponse + '</xsd:response></sso:authDto></sso:login>';
         requestIDP.open(options, endPoint, false);

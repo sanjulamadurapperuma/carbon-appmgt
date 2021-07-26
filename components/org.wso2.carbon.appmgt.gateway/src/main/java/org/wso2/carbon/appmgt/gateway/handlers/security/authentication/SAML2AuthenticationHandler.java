@@ -591,7 +591,7 @@ public class SAML2AuthenticationHandler extends AbstractHandler implements Manag
         SAML2SSOAuthenticationServiceStub stub = null;
         try {
             stub = new SAML2SSOAuthenticationServiceStub(null,
-                    backendServerURL + "/services/SAML2SSOAuthenticationService");
+                    backendServerURL + "SAML2SSOAuthenticationService");
             AuthnReqDTO authnReqDTO = new AuthnReqDTO();
             authnReqDTO.setResponse(samlResponse);
             boolean loggedIn = stub.login(authnReqDTO);
